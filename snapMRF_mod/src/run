@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Iterate over all .ra files in the current directory
+for file in ../data/*.ra
+do
+  # Run the command with the current file as an argument
+  cat "${file%.ra}"
+  ./mrf "$file" > "${file%.ra}.out"
+done

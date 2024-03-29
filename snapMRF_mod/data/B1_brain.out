@@ -1,0 +1,37 @@
+
+nstates : 101
+Blocksize : 64
+Gridsize : 128
+Echo : epg_ssfp
+
+Parsing parameters...
+T1 : 20:20:3000
+T2 : 20:10:1000
+B0 : 0
+B1 : 1
+l_t1: 150, l_t2: 99, l_b0: 1, l_b1: 1
+NATOMS: 12350, natoms: 12350
+Removing situations when T1 <= T2
+NATOMS might be smaller than input
+
+Input mrf: ../data/MRF001.csv
+Reading ../data/MRF001.csv
+NREPS: 1000, nreps: 1000
+
+Constructing dictionary...
+Elapsed dictionary time: 600.00 ms
+
+Input img: ../data/B1_brain.ra
+Reading ../data/B1_brain.ra
+ndims: 2
+RA using CUDA malloc 230400
+nvoxels: 0
+nt: 240, nx: 240, ny: 0
+
+Available GPU memory = 23660 MB
+nsplits = 1, nminivoxels = 0
+Matching...
+m: 12350, n: 0, k: 240
+Elapsed matching time: 143.00 us
+
+Output maps: ../result/maps.ra
