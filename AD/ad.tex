@@ -16,8 +16,8 @@
 % Uncomment/comment the following usetag lines 
 % if you would like to get an explanation or an example.
 % Don't forget to comment them for the final submission.
-\usetag{explanation}
-\usetag{example}
+% \usetag{explanation}
+% \usetag{example}
 
 \begin{document}
 
@@ -101,38 +101,43 @@ $A_1$   &  $C_1,C_2,C_3$ & Table 2-4 \\
 
 \artrel
 % Briefly explain the relationship between the artifact and contributions.
-Provided the source code for:
+The relationship between the artifact and contributions is as follows:
 \begin{itemize}
     \item HDL for hardware synthesize result.
-    \item Setting up performance emulation framwork for \MPCMXU{}.
+    \item Setting up performance emulation framework for \MPCMXU{}.
     \item Performance emulation of case study application using \MPCMXU{}.
 \end{itemize}
 
 \artexp
 % Provide a higher level description of what outcome to expect from the corresponding experiments. 
 % Provide an explanation of how the results substantiate the main contributions.
+The expected outcome of the artifact is as follows:
 \begin{itemize}
-    \item Area energy consumption of \MPCMXU{}.
-    \item Raw perfromance data including throughput and latency of \MPCMXU{}.
-    \item End to end latency of application \MPCMXU{}.
+    \item Area energy consumption of \MPCMXU{}. 
+        \MPCMXU{} shows a 41\% area overhead and 31\% less power consumption compared to the FP16 baseline.
+    \item Raw performance data including throughput and latency of \MPCMXU{}.
+        \MPCMXU{} leads to an average 3.64\x{} and 3.51\x{} higher throughput on SGEMM and CGEMM, respectively, compared to the CUDA baseline.
+    \item End-to-end latency of application \MPCMXU{}.
+        \MPMCMXU{} makes an average 1.52\x{}, 1.65\x{}, 1.26\x{}, and 1.2\x{} speedup on the case studies (FFT, DNN training, MRF, and KNN) respectively.
 \end{itemize}
 
-\artsampl{
-    Algorithm A should be faster than Algorithms C and B in all GPU scenarios.    
-}
+% \artsampl{
+%     Algorithm A should be faster than Algorithms C and B in all GPU scenarios.
+% }
 
 \arttime
 % Estimate the time required to reproduce the artifact, providing separate estimates for the individual steps: 
 % Artifact Setup, Artifact Execution, and Artifact Analysis.
+The expected time to reproduce the artifact on the Nvidia A100 DGX Station is as follows:
 \begin{itemize}
     \item ~5 hrs for HDL synthesization.
     \item ~120 hrs for \MPCMXU{} microbenchmark on all input sizes.
     \item ~24 hrs for case study applications.
 \end{itemize}
 
-\artsampl{
-    The expected computational time of this artifact on GPU X is 20~min.    
-}
+% \artsampl{
+%     The expected computational time of this artifact on GPU X is 20~min.    
+% }
 
 
 \artin
@@ -165,7 +170,7 @@ Provided the source code for:
 \begin{itemize}
     \item follow ReadME.md for cutlass installation and \MPCMXU{} integration.
     \item Configure licenses for Synopsis design compiler.
-    \item Makefiles are provided for each case study applications.
+    \item Makefiles are provided for each case study application.
 \end{itemize}
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
